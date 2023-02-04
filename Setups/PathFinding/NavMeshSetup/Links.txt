@@ -1,0 +1,2 @@
+yt tutorial: https://youtu.beDGBaEuZz-RA
+GitLink for PackageManager: https://github.com/h8man/NavMeshPlus.git
