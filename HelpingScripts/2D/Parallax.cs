@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Parallex : MonoBehaviour
+public class Parallax : MonoBehaviour
 {
     private float startposX;
     private float startposY;

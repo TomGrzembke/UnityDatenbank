@@ -1,12 +1,17 @@
-
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Dialogue", menuName = "Dialogue/Conversation", order = 2)]
-public class DialogueSO : ScriptableObject
+[CreateAssetMenu(fileName = "Example", menuName = "Example/Examples", order = 0)]
+/// <summary> This exampls SO is written for syntax purposes </summary>
+public class ExampleSO : ScriptableObject
 {
-    /// <summary>
-    /// Displays the CharNameList for refernce for the Ids
-    /// </summary>
+    public string questName;
+
+    [TextArea]
+    public string questDetailedDescription;
+
+    public Sprite questImage;
+
+     /// <summary> Displays the CharNameList for refernce for the Ids </summary>
     [SerializeField] string[] charNames = new string[6] { "Speaker" , "Ven" , "Keian" , "Dwayne", "Vara", "Tucker" };
 
 
@@ -27,5 +32,6 @@ public class DialogueSO : ScriptableObject
     {
         return sentencesNameID;
     }
-
+    
 }
+
