@@ -2,12 +2,12 @@ using UnityEngine;
 
 public class #SCRIPTNAME# : MonoBehaviour
 {
-    #region public fields
-
+    #region serialized fields
+    #NOTRIM#
     #endregion
 
     #region private fields
-
+    #NOTRIM#
     #endregion
 
 }
