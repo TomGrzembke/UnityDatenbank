@@ -2,22 +2,22 @@ using UnityEngine;
 
 public class Parallax : MonoBehaviour
 {
-    private float startposX;
-    private float startposY;
-    public GameObject cam;
-    public float parallaxEffectX;
-    public float parallaxEffectY;
+    Vector2 startpos;
+    Vector2 dist;
+    [SerializeField] GameObject cam;
+    [SerializeField] Vector2 parallaxEffect;
+
 
     void Start()
     {
-        startposX = transform.position.x;
-        startposY = transform.position.y;
+        startpos.x = transform.position.x;
+        startpos.y = transform.position.y;
     }
 
     void FixedUpdate()
     {
-        float distX = (cam.transform.position.x * parallaxEffectX);
-        float distY = (cam.transform.position.y * parallaxEffectY);
-        transform.position = new Vector3(startposX + distX, startposY + distY, transform.position.z);
+        dist.x = cam.transform.position.x * parallaxEffect.x;
+        dist.y = cam.transform.position.y * parallaxEffect.y;
+        transform.position = new (startpos.x + dist.x, startpos.y + dist.y, transform.position.z);
     }
 }
