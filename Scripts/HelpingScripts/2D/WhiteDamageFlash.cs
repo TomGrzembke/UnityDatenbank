@@ -22,12 +22,11 @@ public class WhiteDamageFlash : MonoBehaviour
     public void Flash()
     {
         if (flashCoroutine != null)
-        {
             StopCoroutine(flashCoroutine);
-        }
-
+        
         flashCoroutine = StartCoroutine(FlashRoutine());
     }
+    
     IEnumerator FlashRoutine()
     {
         sr.material = flashMaterial;
